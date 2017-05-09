@@ -1,14 +1,14 @@
 /* jQuery and JS for Pizza API */
 $(document).ready(function() {
-
+	
 	/* placeholder focusing */
 	$('#city').data('ph', $('#city').attr('placeholder'));
 	$('#city').focusin(function () {
-    $(this).attr('placeholder', "");
-  });
-  $('#city').focusout(function () {
-    $(this).attr('placeholder', $(this).data('ph'));
-  });
+		$(this).attr('placeholder', "");
+	});
+	$('#city').focusout(function () {
+		$(this).attr('placeholder', $(this).data('ph'));
+	});
 
 	/* check whether 'Find Me Pizza' button clicked or enter key pressed */
 	$('#find').click(function() {
@@ -24,13 +24,13 @@ $(document).ready(function() {
 	});
 
 	/* allow only alphanumerics for city input */
-  $("#city").keypress(function(event) {
-      var inputValue = event.which;
-      if(!(inputValue >= 65 && inputValue <= 90) && !(inputValue >= 97 && inputValue <= 122)
-      	&& (inputValue != 32 && inputValue != 0)) {
-          event.preventDefault();
-      }
-  });
+	$("#city").keypress(function(event) {
+		var inputValue = event.which;
+		if(!(inputValue >= 65 && inputValue <= 90) && !(inputValue >= 97 && inputValue <= 122)
+		   && (inputValue != 32 && inputValue != 0)) {
+			event.preventDefault();
+		}
+	});
 
 	/* capitalize first letter of city name when displayed */
 	/* function allows chaining */
