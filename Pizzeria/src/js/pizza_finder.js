@@ -46,7 +46,7 @@ $(document).ready(function() {
 				fullCityName += " ";
 			}
 		}
-    return fullCityName;
+		return fullCityName;
 	}
 
 	/* clickable list items direct to pizzeria website */
